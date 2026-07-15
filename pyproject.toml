@@ -18,7 +18,7 @@ dev = ["pytest>=7.0.0", "black>=23.0.0", "mypy>=1.0.0"]
 cloudphone-cli = "cloudphone.cli:main"
 
 [project.urls]
-Homepage = "https://www.qtphone.com"
+Homepage = "https://www.android-cloud-device.com"
 Repository = "https://github.com/luoshixin93-sudo/cloudphone-sdk-python"
 
 [tool.setuptools.packages.find]
