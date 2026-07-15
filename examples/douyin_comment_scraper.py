@@ -35,7 +35,7 @@ def scrape_device(client, device_id, video_url, scrolls=10):
     return {"device_id": device_id, "comment_count": 0, "comments": comments}
 
 def main():
-    ap = argparse.ArgumentParser(description="Scrape Douyin/TikTok comments via CloudPhone")
+    ap = argparse.ArgumentParser(description="Scrape Douyin/TikTok comments via AndroidCloudDevice")
     ap.add_argument("--video-url", required=True)
     ap.add_argument("--devices", nargs="+", required=True)
     ap.add_argument("--scrolls", type=int, default=10)
