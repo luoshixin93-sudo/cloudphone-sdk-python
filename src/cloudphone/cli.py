@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""CloudPhone CLI -- manage CloudPhone devices from terminal."""
+"""Android Cloud Device CLI -- manage Android cloud devices from terminal."""
 import argparse, json, os, sys
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 from cloudphone import CloudPhoneClient, CloudPhoneError, AuthenticationError
@@ -13,7 +13,7 @@ def client():
 
 
 def main():
-    ap = argparse.ArgumentParser(description="CloudPhone CLI")
+    ap = argparse.ArgumentParser(description="Android Cloud Device CLI")
     sp = ap.add_subparsers(dest="cmd", required=True)
 
     # devices list
