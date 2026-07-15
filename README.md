@@ -1,20 +1,20 @@
-# CloudPhone SDK for Python
+# Android Cloud Device SDK for Python
 
-[![PyPI](https://img.shields.io/pypi/v/cloudphone-sdk.svg)](https://pypi.org/project/cloudphone-sdk/)
+[![PyPI](https://img.shields.io/pypi/v/android_cloud_device-sdk.svg)](https://pypi.org/project/android_cloud_device-sdk/)
 [![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-> Manage **CloudPhone** (Android cloud devices with dedicated public IPs) programmatically.
+> Manage **Android Cloud Device** (Android cloud devices with dedicated public IPs) programmatically.
 
-[qtphone.com](https://www.qtphone.com) | [Documentation](#quick-start) | [Issues](https://github.com/luoshixin93-sudo/cloudphone-sdk-python/issues)
+[your-cloud-android-api.com](https://www.your-cloud-android-api.com) | [Documentation](#quick-start) | [Issues](https://github.com/luoshixin93-sudo/android_cloud_device-sdk-python/issues)
 
 ---
 
-## Why CloudPhone?
+## Why Android Cloud Device?
 
-Every CloudPhone instance comes with a **dedicated public IP address**, real Android OS, and full ADB access.
+Every Android Cloud Device instance comes with a **dedicated public IP address**, real Android OS, and full ADB access.
 
-| | CloudPhone | Emulator | Physical Farm |
+| | Android Cloud Device | Emulator | Physical Farm |
 |---|:---:|:---:|:---:|
 | Dedicated IP | YES | NO | YES |
 | Full Android | YES | Limited | YES |
@@ -36,12 +36,12 @@ Every CloudPhone instance comes with a **dedicated public IP address**, real And
 ## Quick Start
 
 ```bash
-pip install cloudphone-sdk
+pip install android_cloud_device-sdk
 ```
 
 ```python
-from cloudphone import CloudPhoneClient
-client = CloudPhoneClient(api_key="your_key")
+from android_cloud_device import Android Cloud DeviceClient
+client = Android Cloud DeviceClient(api_key="your_key")
 devices = client.list_devices()
 for d in devices:
     print(d.id, d.status, d.public_ip)
@@ -51,10 +51,10 @@ for d in devices:
 
 ```bash
 export CLOUDPHONE_API_KEY=your_key
-cloudphone-cli devices list
-cloudphone-cli device screenshot GZ-01 --output screen.png
-cloudphone-cli device shell GZ-01 --cmd "dumpsys battery"
-cloudphone-cli device push GZ-01 --local app.apk --remote /sdcard/app.apk
+android_cloud_device-cli devices list
+android_cloud_device-cli device screenshot GZ-01 --output screen.png
+android_cloud_device-cli device shell GZ-01 --cmd "dumpsys battery"
+android_cloud_device-cli device push GZ-01 --local app.apk --remote /sdcard/app.apk
 ```
 
 ## Examples
@@ -80,4 +80,4 @@ MIT -- see LICENSE.
 
 ## Contact
 
-[qtphone.com](https://www.qtphone.com) | WhatsApp @along915 | ailong9281@gmail.com | Telegram @Alongyun
+[your-cloud-android-api.com](https://www.your-cloud-android-api.com) | WhatsApp @along915 | ailong9281@gmail.com | Telegram @Alongyun
