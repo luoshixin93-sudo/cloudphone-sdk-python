@@ -1,4 +1,4 @@
-"""CloudPhone REST API Client for Python."""
+"""Android Cloud Device REST API Client for Python."""
 from __future__ import annotations
 import os, time, json, logging
 from typing import Optional, List, Dict, Any
@@ -10,19 +10,19 @@ from cloudphone.models import Device, ScreenshotResult, ShellResult, FileTransfe
 logger = logging.getLogger(__name__)
 
 
-class CloudPhoneError(Exception):
+class CloudDeviceError(Exception):
     def __init__(self, msg, code=None, status_code=None):
         super().__init__(msg); self.message = msg; self.code = code; self.status_code = status_code
 
 
-class AuthenticationError(CloudPhoneError): pass
-class RateLimitError(CloudPhoneError):
+class DeviceAuthError(CloudDeviceError): pass
+class DeviceRateLimitError(CloudDeviceError):
     def __init__(self, msg, retry_after=None, **kw):
         super().__init__(msg, **kw); self.retry_after = retry_after
 
 
 class CloudPhoneClient:
-    DEFAULT_BASE_URL = "https://api.qtphone.com/v1"
+    DEFAULT_BASE_URL = "https://api.example.com/v1"  # Replace with your Android cloud device API
 
     def __init__(self, api_key: Optional[str] = None, base_url: Optional[str] = None,
                  timeout: int = 30, max_retries: int = 3):
@@ -35,7 +35,7 @@ class CloudPhoneClient:
         self._session.headers.update({
             "Authorization": f"Bearer {self.api_key}",
             "Content-Type": "application/json",
-            "User-Agent": "CloudPhone-SDK-Python/0.1.0",
+            "User-Agent": "AndroidCloudSDK-Python/0.1.0",
         })
 
     def _create_session(self):
