@@ -11,7 +11,7 @@ def main():
     ap.add_argument("--watch", nargs="+")
     a = ap.parse_args()
     c = CloudPhoneClient()
-    print("CloudPhone Device Monitor (Ctrl+C to stop)\n")
+    print("AndroidCloudDevice Device Monitor (Ctrl+C to stop)\n")
     states = {}
     try:
         while True:
